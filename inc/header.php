@@ -11,11 +11,11 @@
             <ul class="nav-links">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="a-propos.html">À Propos</a></li>
-                <li><a href="src/categories.html">Catégories</a></li>
+                <li><a href="categories.php">Catégories</a></li>
                     <ul class="dropdown">
-                        <li><a href="gateaux-photo.html">Gâteaux Photo</a></li>
-                        <li><a href="pieces-montees-fruites.html">Pièces Montées Fruitées</a></li>
-                        <li><a href="charlottes.html">Charlottes</a></li>
+                        <li><a href="gateaux-photo.php">Gâteaux Photo</a></li>
+                        <li><a href="pieces-montees-fruites.php">Pièces Montées Fruitées</a></li>
+                        <li><a href="charlottes.php">Charlottes</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
