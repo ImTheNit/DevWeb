@@ -1,6 +1,7 @@
 <?php 
 $pageTitle = " Contact "; 
-include '../inc/header.php'; 
+$Path_ref="../";
+include $Path_ref.'inc/header.php'; 
 ?>
 
 <div class="contact-form-container">
@@ -33,5 +34,5 @@ include '../inc/header.php';
 </div>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>

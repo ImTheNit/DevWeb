@@ -1,13 +1,14 @@
 <?php 
 $pageTitle = "Les catégories "; 
-include '../inc/header.php'; 
+$Path_ref="../";
+include $Path_ref.'inc/header.php'; 
 ?>
 
 <div id="categories-container"></div> 
 
-<script src="script.js"></script>
+<script src="<?php echo $Path_ref; ?>script.js"></script>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>
 

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include ("../inc/header.php");
-include ("../inc/footer.php");
+$Path_ref="../";
+include ($Path_ref."inc/header.php");
+include ($Path_ref."inc/footer.php");
 ?>
 <body>
     

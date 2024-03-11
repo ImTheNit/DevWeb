@@ -4,7 +4,7 @@
             <h5>Infos Pratiques</h5>
             <ul>
                 <li><a href="#">Plan du site</a></li>
-                <li><a href="contact.php">Contactez-nous</a></li>
+                <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contactez-nous</a></li>
                 
             </ul>
         </div>

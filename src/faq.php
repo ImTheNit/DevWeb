@@ -1,6 +1,7 @@
 <?php 
-$pageTitle = " FAQ "; 
-include '../inc/header.php'; 
+$pageTitle = " FAQ ";
+$Path_ref="../"; 
+include $Path_ref.'inc/header.php'; 
 ?>
 
 <div class="faq-container">
@@ -55,5 +56,5 @@ include '../inc/header.php';
 </div>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>

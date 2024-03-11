@@ -1,8 +1,9 @@
 <?php 
+$Path_ref="";
 $pageTitle = "Le Palais des gâteaux";
-include 'inc/header.php'; 
+include ($Path_ref."inc/header.php"); 
 ?>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="<?php echo $Path_ref; ?>css/style.css">
 
 <h1 class="homepage-title">Le Palais des Gâteaux</h1>
 
@@ -14,11 +15,7 @@ include 'inc/header.php';
 
 
 <?php
-include ("inc/head.php");
-include ("inc/header.php");
-include ("inc/footer.php");
+
+include ($Path_ref."inc/footer.php");
 ?>
-<body>
-    
-</body>
-</html>
+

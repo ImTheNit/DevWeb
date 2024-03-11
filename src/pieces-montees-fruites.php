@@ -1,13 +1,14 @@
 <?php 
+$Path_ref="../";
 $pageTitle = "Les Pièces montées fruitées"; 
-include '../inc/header.php'; 
+include $Path_ref.'inc/header.php'; 
 ?>
 
 <h1>Les pièces montées fruitées</h1>
 
 <?php
 
-$jsonData = file_get_contents('data.json');
+$jsonData = file_get_contents($Path_ref.'data.json');
 
 $data = json_decode($jsonData, true);
 
@@ -44,5 +45,5 @@ if (isset($data['Les pièces montées fruitées'])) {
 ?>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>

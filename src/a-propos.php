@@ -1,6 +1,7 @@
 <?php 
 $pageTitle = "A propos"; 
-include '../inc/header.php'; 
+$Path_ref="../";
+include $Path_ref.'inc/header.php'; 
 ?>
 <div class="about-container">
   <h2>À propos de nous</h2>
@@ -23,5 +24,5 @@ include '../inc/header.php';
 </div>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>

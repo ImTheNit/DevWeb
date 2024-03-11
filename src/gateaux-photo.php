@@ -1,13 +1,14 @@
 <?php 
-$pageTitle = "Les Gateaux photo"; 
-include '../inc/header.php'; 
+$pageTitle = "Les Gateaux photo";
+$Path_ref="../"; 
+include $Path_ref.'inc/header.php'; 
 ?>
 
 <h1>Les gâteaux photo</h1>
 
 <?php
 
-$jsonData = file_get_contents('data.json');
+$jsonData = file_get_contents($Path_ref.'data.json');
 
 $data = json_decode($jsonData, true);
 
@@ -44,5 +45,5 @@ if (isset($data['Les gateaux photo'])) {
 ?>
 
 <?php  
-include '../inc/footer.php'; 
+include $Path_ref.'inc/footer.php'; 
 ?>
