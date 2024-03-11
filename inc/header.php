@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar">
             <div class="nav-brand">
-                <a href="<?php echo $Path_ref; ?>index.php"><img src="<?php echo $Path_ref; ?>images/logo.jpg" alt="Logo"></a>
+                <a href="<?php echo $Path_ref; ?>index.php"><img src="<?php echo $Path_ref; ?>images/logo.png" alt="Logo"></a>
             </div>
             <ul class="nav-links">
                 <li><a href="<?php echo $Path_ref; ?>index.php">Accueil</a></li>
