@@ -1,6 +1,6 @@
 <?php 
 $pageTitle = "Les Gateaux photo"; 
-include 'include/header.inc.php'; 
+include 'inc/header.php'; 
 ?>
 
 <h1>Les gâteaux photo</h1>
@@ -44,5 +44,5 @@ if (isset($data['Les gateaux photo'])) {
 ?>
 
 <?php  
-include 'include/footer.inc.php'; 
+include 'inc/footer.php'; 
 ?>

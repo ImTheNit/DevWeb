@@ -1,7 +1,8 @@
 <?php 
 $pageTitle = "Le Palais des gâteaux";
-include 'include/header.inc.php'; 
+include 'inc/header.php'; 
 ?>
+<link rel="stylesheet" href="css/style.css">
 
 <h1 class="homepage-title">Le Palais des Gâteaux</h1>
 
@@ -50,5 +51,5 @@ foreach ($data as $categoryName => $products) {
 ?>
 
 <?php  
-include 'include/footer.inc.php'; 
+include 'inc/footer.php'; 
 ?>

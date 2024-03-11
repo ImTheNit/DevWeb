@@ -1,6 +1,6 @@
 <?php 
 $pageTitle = "A propos"; 
-include 'include/header.inc.php'; 
+include 'inc/header.php'; 
 ?>
 <div class="about-container">
   <h2>À propos de nous</h2>
@@ -23,5 +23,5 @@ include 'include/header.inc.php';
 </div>
 
 <?php  
-include 'include/footer.inc.php'; 
+include 'inc/footer.php'; 
 ?>

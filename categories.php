@@ -1,12 +1,13 @@
 <?php 
 $pageTitle = "Les catégories "; 
-include 'include/header.inc.php'; 
+include 'inc/header.php'; 
 ?>
 
 <div id="categories-container"></div> 
 
 <script src="script.js"></script>
+
 <?php  
-include 'include/footer.inc.php'; 
+include 'inc/footer.php'; 
 ?>
 

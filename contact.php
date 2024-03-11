@@ -1,6 +1,6 @@
 <?php 
 $pageTitle = " Contact "; 
-include 'include/header.inc.php'; 
+include 'inc/header.php'; 
 ?>
 
 <div class="contact-form-container">
@@ -33,5 +33,6 @@ include 'include/header.inc.php';
 </div>
 
 <?php  
-include 'include/footer.inc.php'; 
+include 'inc/footer.php'; 
 ?>
+

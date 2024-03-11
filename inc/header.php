@@ -31,8 +31,8 @@
                     <input type="text" placeholder="Rechercher...">
                     <button type="submit">🔍</button>
                 </div>
-                <a href="compte.html" class="user-icon"><img src="images/user-login-icon-14.png" alt="Compte"></a>
-                <a href="panier.html" class="user-icon"><img src="images/panier.jpg" alt="Panier"></a>
+                <a href="compte.php" class="user-icon"><img src="images/user-login-icon-14.png" alt="Compte"></a>
+                <a href="panier.php" class="user-icon"><img src="images/panier.jpg" alt="Panier"></a>
             </div>
         </nav>
     </header>
