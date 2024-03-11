@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $Path_ref; ?>css/style.css">
     <title><?php echo $pageTitle; ?></title> 
+    <link rel="shortcut icon" href="/DevWeb/images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <header>
