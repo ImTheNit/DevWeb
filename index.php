@@ -14,8 +14,7 @@ include 'inc/header.php';
 
 
 <?php
-include ("inc/head.php");
-include ("inc/header.php");
+//include ("inc/head.php");
 include ("inc/footer.php");
 ?>
 <body>

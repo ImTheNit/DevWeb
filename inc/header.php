@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title><?php echo $pageTitle; ?></title> 
+    <link rel="shortcut icon" href="/DevWeb/images/logo.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="nav-brand">
-                <a href="index.php"><img src="images/logo.jpg" alt="Logo"></a>
+                <a href="/DevWeb/index.php"><img src="/DevWeb/images/logo.png" alt="Logo"></a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.php">Accueil</a></li>
+                <li><a href="/DevWeb/index.php">Accueil</a></li>
                 <li><a href="a-propos.php">À Propos</a></li>
                 <li class="nav-item">
             <a href="categories.php">Catégories</a>
