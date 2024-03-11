@@ -19,9 +19,9 @@
                 <li class="nav-item">
             <a href="<?php echo $Path_ref; ?>src/categories.php">Catégories</a>
             <ul class="dropdown">
-                <li><a href="<?php echo $Path_ref; ?>src/gateaux-photo.php">Gâteaux Photo</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/pieces-montees-fruites.php">Pièces Montées Fruitées</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/charlottes.php">Charlottes</a></li>
+                <li><a href="categories.php?cat=Les-gateaux-photo">Gâteaux Photo</a></li>
+                <li><a href="categories.php?cat=Les-pieces-montees-fruitees">Pièces Montées Fruitées</a></li>
+                <li><a href="categories.php?cat=Les-charlottes">Charlottes</a></li>
             </ul>
         </li>
                 <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contact</a></li>
