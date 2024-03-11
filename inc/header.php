@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title><?php echo $pageTitle; ?></title> 
 </head>
 <body>
@@ -18,21 +18,21 @@
                 <li class="nav-item">
             <a href="categories.php">Catégories</a>
             <ul class="dropdown">
-                <li><a href="les-gateaux-photo.php">Gâteaux Photo</a></li>
-                <li><a href="les-pièces-montées-fruitées.php">Pièces Montées Fruitées</a></li>
-                <li><a href="les-charlottes.php">Charlottes</a></li>
+                <li><a href="src/gateaux-photo.php">Gâteaux Photo</a></li>
+                <li><a href="src/pieces-montees-fruites.php">Pièces Montées Fruitées</a></li>
+                <li><a href="src/charlottes.php">Charlottes</a></li>
             </ul>
         </li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="faq.php">FAQ</a></li>
+                <li><a href="src/contact.php">Contact</a></li>
+                <li><a href="src/faq.php">FAQ</a></li>
             </ul>
             <div class="user-interactions">
                 <div class="searchbar">
                     <input type="text" placeholder="Rechercher...">
                     <button type="submit">🔍</button>
                 </div>
-                <a href="compte.php" class="user-icon"><img src="images/user-login-icon-14.png" alt="Compte"></a>
-                <a href="panier.php" class="user-icon"><img src="images/panier.jpg" alt="Panier"></a>
+                <a href="src/compte.php" class="user-icon"><img src="images/user-login-icon-14.png" alt="Compte"></a>
+                <a href="src/panier.php" class="user-icon"><img src="images/panier.jpg" alt="Panier"></a>
             </div>
         </nav>
     </header>

@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php
-include ("../inc/head.php");
-include ("../inc/header.php");
-include ("../inc/footer.php");
+<?php 
+$pageTitle = " Votre Compte "; 
+include '../inc/header.php'; 
 ?>
-<body>
-    
-</body>
-</html>
+
+<div class="login-container">
+    <h2>Connexion</h2>
+    <form action="connexion_handler.php" method="post">
+        <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn-login">Se connecter</button>
+        <p class="signup-link">Vous n'avez pas de compte ? <a href="creer_compte.php">Créez-en un</a></p>
+    </form>
+</div>
+
+<?php  
+include '../inc/footer.php'; 
+?>

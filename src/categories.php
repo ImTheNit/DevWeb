@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php
-include ("../inc/head.php");
-include ("../inc/header.php");
-include ("../inc/footer.php");
+<?php 
+$pageTitle = "Les catégories "; 
+include '../inc/header.php'; 
 ?>
-<body>
-    
-</body>
-</html>
+
+<div id="categories-container"></div> 
+
+<script src="script.js"></script>
+
+<?php  
+include '../inc/footer.php'; 
+?>
+
