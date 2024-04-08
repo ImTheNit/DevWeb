@@ -1,3 +1,22 @@
+<?php 
+session_start();
+
+$session_options = [
+    'lifetime' => 0,
+    'path' => '/',
+    'domain' => '', 
+    'secure' => true, 
+    'httponly' => true,
+    'samesite' => 'Lax' 
+];
+
+if (!isset($_SESSION['initiated'])) {
+    session_regenerate_id();
+    $_SESSION['initiated'] = true;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

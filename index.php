@@ -1,7 +1,7 @@
 <?php 
 $Path_ref="";
 $pageTitle = "Le Palais des gâteaux";
-include ($Path_ref."inc/header.php"); 
+include $Path_ref."inc/header.php"; 
 ?>
 <link rel="stylesheet" href="<?php echo $Path_ref; ?>css/style.css">
 
@@ -14,45 +14,41 @@ include ($Path_ref."inc/header.php");
 </div>
 
 <?php
-
-$jsonData = file_get_contents('data.json');
-
-$data = json_decode($jsonData, true);
-
-
-foreach ($data as $categoryName => $products) {
-    echo "<h2>" . htmlspecialchars($categoryName) . "</h2>";
-    echo "<div class='accueil-products-grid'>"; 
-
-    foreach ($products as $product) {
-        echo "<div class='accueil-card-product'>";
-        
-        echo "<img class='accueil-image-product' src='" . htmlspecialchars($product['image_link']) . "' alt='" . htmlspecialchars($product['name']) . "'>";
-        
-        echo "<h3 class='accueil-name-product'>" . htmlspecialchars($product['name']) . "</h3>";
-        
-        echo "<p class='accueil-description-product'>" . htmlspecialchars($product['description']) . "</p>";
-       
-        echo "<p class='accueil-price-product'>" . htmlspecialchars(current($product['prices'])) . "€</p>";
-
-        
-        echo "<div class='quantity-container'>";
-        echo "<label for='quantity'>Quantité: </label>";
-        echo "<input type='number' id='quantity' name='quantity' value='1' min='1' class='quantity-input'>";
-        echo "</div>";
-
-        
-        echo "<button class='accueil-add-to-cart-btn'>Ajouter au panier</button>";
-        echo "</div>"; 
-    }
-
-    echo "</div>"; 
-}
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
 ?>
+
+<div class="new-section">
+    <div class="section-header">
+		<img src="images/expertise.png" alt="Description de l'image">
+        <h4>25 ANS DE SAVOIR-FAIRE</h4>
+        <p>Artisans patissier depuis 1999</p>
+    </div>
+    <div class="section-header">
+		<img src="images/order.jpg" alt="Description de l'image">
+        <h4>COMMANDE SIMPLE ET RAPIDE</h4>
+        <p>Finalisez votre commande en quelques clics</p>
+    </div>
+    <div class="section-header">
+		<img src="images/delivery.jpg" alt="Description de l'image">
+        <h4>LIVRAISON À DATE FIXE</h4>
+        <p>En 5h en Ile-de-France et 24h dans toute la France</p>
+    </div>
+    <div class="section-header">
+		<img src="images/conformity.png" alt="Description de l'image">
+        <h4>GATEAU 100% CONFORME</h4>
+        <p>Photo prise au moment de l'expédition et envoyée par mail</p>
+    </div>
+</div>
+
+
+
+<div id="message-panier" class="message-panier"></div> 
 
 
 <?php
 
-include ($Path_ref."inc/footer.php");
+include $Path_ref."inc/footer.php";
 ?>
 
