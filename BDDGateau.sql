@@ -1,51 +1,34 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/BW562l
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
-CREATE TABLE `Gateau` (
-    `nom` string  NOT NULL ,
-    `quantitéDispo` int  NOT NULL ,
-    `commandable` boolean  NOT NULL ,
-    `prix` double  NOT NULL ,
-    PRIMARY KEY (
-        `nom`
-    )
-);
+Create DATABASE IF NOT EXISTS `PalaisDesGateaux`;
 
-CREATE TABLE `commande` (
-    `numero` int  NOT NULL ,
-    `id` client  NOT NULL ,
-    PRIMARY KEY (
-        `numero`
-    )
-);
+CREATE TABLE IF NOT EXISTS `Gateau` (
+  `idGateau` INT NOT NULL,
+  `Nom` VARCHAR(20) NOT NULL,
+  `Goût` VARCHAR(15) NULL,
+  PRIMARY KEY (`idGateau`)
+ )
 
-CREATE TABLE `client` (
-    `id` int  NOT NULL ,
-    `prénom` string  NOT NULL ,
-    `nom` string  NOT NULL ,
-    `adresse` string  NOT NULL ,
-    PRIMARY KEY (
-        `id`
-    )
-);
+CREATE TABLE IF NOT EXISTS `Allergènes` (
+  `NomAllegène` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`NomAllegène`))
 
-CREATE TABLE `ligne` (
-    `nomgateau` string  NOT NULL ,
-    `idcommande` int  NOT NULL ,
-    `quantite` int  NOT NULL ,
-    PRIMARY KEY (
-        `nomgateau`,`idcommande`
-    )
-);
 
-ALTER TABLE `commande` ADD CONSTRAINT `fk_commande_id` FOREIGN KEY(`id`)
-REFERENCES `client` (`id`);
+CREATE TABLE IF NOT EXISTS `Client` (
+  `idClient` INT NOT NULL AUTO_INCREMENT,
+  `Nom` VARCHAR(20) NOT NULL,
+  `Prénom` VARCHAR(20) NOT NULL,
+  `Numéro rue` INT NOT NULL,
+  `Nom rue` VARCHAR(45) NOT NULL,
+  `Nom ville` VARCHAR(45) NOT NULL,
+  `Code postal` INT NOT NULL,
+  `mot de passe encrypté` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(50) NULL,
+  PRIMARY KEY (`idClient`))
 
-ALTER TABLE `ligne` ADD CONSTRAINT `fk_ligne_nomgateau` FOREIGN KEY(`nomgateau`)
-REFERENCES `Gateau` (`nom`);
+CREATE TABLE IF NOT EXISTS `Commande` (
+  `NuméroCommande` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`NuméroCommande`)
 
-ALTER TABLE `ligne` ADD CONSTRAINT `fk_ligne_idcommande` FOREIGN KEY(`idcommande`)
-REFERENCES `commande` (`numero`);
+
 
