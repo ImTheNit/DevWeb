@@ -1,37 +1,42 @@
 
 
-Create DATABASE IF NOT EXISTS `PalaisDesGateaux`;
+Create DATABASE IF NOT EXISTS PalaisDesGateaux;
 
-CREATE TABLE IF NOT EXISTS `Gateau` (
-  `idGateau` INT NOT NULL,
-  `Nom` VARCHAR(20) NOT NULL,
-  `Goût` VARCHAR(15) NULL,
-  PRIMARY KEY (`idGateau`)
- )
+CREATE TABLE IF NOT EXISTS Gateau(
+  idGateau INT NOT NULL AUTO_INCREMENT,
+  Nom VARCHAR(20) NOT NULL,
+  Goût VARCHAR(15) NULL,
+  PRIMARY KEY (idGateau)
+ );
 
-CREATE TABLE IF NOT EXISTS `Allergènes` (
-  `NomAllegène` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`NomAllegène`)
-  )
+CREATE TABLE IF NOT EXISTS Allergenes (
+  Nom VARCHAR(20) NOT NULL,
+  PRIMARY KEY (Nom));
 
 
-CREATE TABLE IF NOT EXISTS `Client` (
-  `idClient` INT NOT NULL AUTO_INCREMENT,
-  `Nom` VARCHAR(20) NOT NULL,
-  `Prénom` VARCHAR(20) NOT NULL,
-  `Numéro rue` INT NOT NULL,
-  `Nom rue` VARCHAR(45) NOT NULL,
-  `Nom ville` VARCHAR(45) NOT NULL,
-  `Code postal` INT NOT NULL,
-  `mot de passe encrypté` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(50) NULL,
-  PRIMARY KEY (`idClient`)
-  )
+CREATE TABLE IF NOT EXISTS Client (
+  idClient INT NOT NULL AUTO_INCREMENT,
+  Nom VARCHAR(20) NOT NULL,
+  Prenom VARCHAR(20) NOT NULL,
+  mdp VARCHAR(45) NOT NULL,
+  email VARCHAR(50) NULL,
+  PRIMARY KEY (idClient),
+  FOREIGN KEY fk_id_commande_adresse_default(idcad) REFERENCES Commande(NumeroCommande));
+  
 
-CREATE TABLE IF NOT EXISTS `Commande` (
-  `NuméroCommande` INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`NuméroCommande`)
-)
+CREATE TABLE IF NOT EXISTS Commande (
+  NumeroCommande INT NOT NULL AUTO_INCREMENT,
+  NumeroRue INT NOT NULL,
+  NomRue VARCHAR(45) NOT NULL,
+  NomVille VARCHAR(45) NOT NULL,
+  CodePostal INT NOT NULL,
+  PRIMARY KEY (NuméroCommande));
+  
+CREATE TABLE IF NOT EXISTS LienAllergene (
+  FOREIGN KEY fk_allergene(NomAllergene) REFERENCES Allergenes(Nom),
+  FOREIGN KEY fk_gateau_nom(NomGateau) REFERENCES Gateau(Nom),
+  FOREIGN KEY fk_gateau_gout(GoutGateau) REFERENCES Gateau(Gout)
+  );
 
 INSERT INTO gateau VALUES (0,"gateauPhoto","Fraisier");
 INSERT INTO gateau VALUES (1,"gateauPhoto","Framboisier");
