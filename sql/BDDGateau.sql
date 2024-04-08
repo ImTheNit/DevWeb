@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS LienAllergene (
   GoutGateau VARCHAR(15) NOT NULL,
   FOREIGN KEY fk_allergene(NomAllergene) REFERENCES Allergenes(Nom),
   FOREIGN KEY fk_gateau_nom(NomGateau) REFERENCES Gateau(Nom),
-  FOREIGN KEY fk_gateau_gout(GoutGateau) REFERENCES Gateau(Gout)
+  FOREIGN KEY fk_gateau_gout(GoutGateau) REFERENCES Gateau(Gout),
+  PRIMARY KEY(GoutGateau,NomGateau,NomAllergene)
   );
 
 INSERT INTO gateau VALUES (,"gateauPhoto","Fraisier");
