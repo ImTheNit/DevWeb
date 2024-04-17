@@ -811,8 +811,75 @@ text-align: center;
   height: auto; 
 }
 
+.message-panier {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #c7b513;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.message-panier.visible {
+  visibility: visible;
+  opacity: 1;
+}
 
 
+.panier-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #e21a1a;
+}
+
+.panier-table th, 
+.panier-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 12px;
+}
+
+.panier-table th {
+  background-color: #da4316;
+  color: white;
+}
+
+
+.panier-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.panier-table tr:hover {
+  background-color: #ddd;
+}
+
+
+.panier-table img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.panier-table .btn-supprimer {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.panier-table .btn-supprimer:hover {
+  background-color: #d32f2f;
+}
 
 
 

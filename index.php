@@ -13,11 +13,6 @@ include $Path_ref."inc/header.php";
     <p>Laissez-vous guider par vos sens et trouvez le gâteau parfait pour célébrer vos moments les plus précieux.</p>
 </div>
 
-<?php
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
-?>
 
 <div class="new-section">
     <div class="section-header">

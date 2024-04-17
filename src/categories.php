@@ -2,8 +2,12 @@
 $pageTitle = "Les catégories "; 
 $Path_ref="../";
 include $Path_ref.'inc/header.php'; 
+?>
 
+<div id="message-panier" class="message-panier"></div> 
 
+<div id="categories-container"></div>
+<?php
 $categoryName = isset($_GET['cat']) ? str_replace('-', ' ', $_GET['cat']) : null;
 
 $jsonData = file_get_contents('../data.json');

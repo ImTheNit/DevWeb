@@ -38,9 +38,9 @@ if (!isset($_SESSION['initiated'])) {
                 <li class="nav-item">
             <a href="<?php echo $Path_ref; ?>src/categories.php">Catégories</a>
             <ul class="dropdown">
-                <li><a href="categories.php?cat=Les-gateaux-photo">Gâteaux Photo</a></li>
-                <li><a href="categories.php?cat=Les-pieces-montees-fruitees">Pièces Montées Fruitées</a></li>
-                <li><a href="categories.php?cat=Les-charlottes">Charlottes</a></li>
+                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-gateaux-photo">Gâteaux Photo</a></li>
+                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-pieces-montees-fruitees">Pièces Montées Fruitées</a></li>
+                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-charlottes">Charlottes</a></li>
             </ul>
         </li>
                 <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contact</a></li>
