@@ -7,31 +7,29 @@ $id = @mysqli_connect("localhost", "root", "","palaisdesgateaux") or die("Imposs
 $email=$_POST["email"];
 $password=$_POST["password"];
 
-echo $email;
-/* Vérification nouveau mail */
+$message="";
+$nextpage="compte.php";
+
 
 $req = "SELECT email,mdp  FROM client WHERE email = '". $email ."';";
 $rep = mysqli_query ($id,$req) or die ('Erreur SQL !'.$sql.'<br />'.mysqli_error());
 if (mysqli_num_rows($rep) == 0){
-    mysqli_close($id) or die ("Impossible de se déconnecter : " );
-    $message = "Aucun compte avec cet email n'existe";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    echo "<meta http-equiv='refresh' content='0;URL=compte.php'>";
+    $message = "Aucun compte avec cet email n\'existe";
+    $nextpage="compte.php";
+}elseif(mysqli_num_rows($rep) == 1){
+    $tab=mysqli_fetch_assoc($rep);// recuperation du resultat de la requette sous la forme de tableau associatif
+    if (password_verify($password,$tab['mdp'])){  //verification mot de passe  
+        $message = "Connexion réussie";
+        $nextpage="../index.php";
+    }else{
+        $message = "Mot de passe inccorect";
+        $nextpage="compte.php";
+    }
 }
-
-/*ajout verification mdp hashé en base*/
-
-/* hashing pwd */
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+mysqli_close($id) or die ("Impossible de se déconnecter : " );
+echo "<script type='text/javascript'>alert('$message');</script>";
+echo "<meta http-equiv='refresh' content='0;URL=$nextpage'>";
 
 
 
-$sql = 'INSERT INTO client VALUES("","'.$lastname.'","'.$name.'","'.$email.'","'.$hashedPassword.'","'.$num.'","'.$typeVoie.'","'.$rue.'","'.$ville.'","'.$codepostal.'")';
-
-mysqli_query ($id,$sql) or die ('Erreur SQL !'.$sql.'<br />'.mysqli_error());
-
-mysqli_close($id) or die ("Impossible de se déconnecter : " );;
-
-
-//header('Location: compte.php');
 ?>

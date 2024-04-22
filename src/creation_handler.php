@@ -38,12 +38,13 @@ $sql = 'INSERT INTO client VALUES("","'.$lastname.'","'.$name.'","'.$email.'","'
 mysqli_query ($id,$sql) or die ('Erreur SQL !'.$sql.'<br />'.mysqli_error());
 
 $message = "Création de compte complétée";
+$nextpage = 'compte.php';
 echo "<script type='text/javascript'>alert('$message');</script>";
-echo "<meta http-equiv='refresh' content='0;URL=compte.php'>";
+echo "<meta http-equiv='refresh' content='0;URL=$nextpage'>";
 
 
 mysqli_close($id) or die ("Impossible de se déconnecter : " );;
 
 
-//header('Location: compte.php');
+
 ?>
