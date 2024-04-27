@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS Client (
   Nom VARCHAR(20) NOT NULL,
   Prenom VARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL,
-  mdp VARCHAR(200) NOT NULL,
+  mdp VARCHAR(200) NOT NULL, -- Augmenter la taille du champ car la fonction password_hash() dans php retourne un chaine plus longue
   Numero INT ,
   TypeVoie VARCHAR(45),
   NomVoie VARCHAR(45),
