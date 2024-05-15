@@ -2,6 +2,13 @@
 $pageTitle = " Votre Compte "; 
 $Path_ref="../";
 include $Path_ref.'inc/header.php'; 
+
+
+// redirect if already connect
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true ){
+    header("location:profil.php");
+}
+
 ?>
 
 <div class="login-container">

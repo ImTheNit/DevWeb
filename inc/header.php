@@ -51,6 +51,12 @@ if (!isset($_SESSION['initiated'])) {
                     <input type="text" placeholder="Rechercher...">
                     <button type="submit">🔍</button>
                 </div>
+                <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true ){
+                       echo "<a href=".$Path_ref."src/deconnection.php class='user-icon'><img src=".$Path_ref."images/deconnexion.png alt=Deconnection></a>"; 
+                    }
+                
+                
+                ?>
                 <a href="<?php echo $Path_ref; ?>src/compte.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/user-login-icon-14.png" alt="Compte"></a>
                 <a href="<?php echo $Path_ref; ?>src/panier.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/panier.jpg" alt="Panier"></a>
             </div>

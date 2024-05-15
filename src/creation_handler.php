@@ -18,7 +18,7 @@ echo $email;
 /* Vérification nouveau mail */
 
 $req = "SELECT *  FROM client WHERE email = '". $email ."';";
-$rep = mysqli_query ($id,$req) or die ('Erreur SQL !'.$sql.'<br />'.mysqli_error());
+$rep = mysqli_query ($id,$req) or die ('Erreur SQL !'.$req.'<br />'.mysqli_error());
 if (mysqli_num_rows($rep) != 0){
     mysqli_close($id) or die ("Impossible de se déconnecter : " );
     $message = "Un compte avec cet email existe déjà connectez vous";
