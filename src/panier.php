@@ -12,11 +12,18 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Vérifier si le panier est vide
 if (empty($_SESSION['panier'])) {
-    echo "<p>Votre panier est vide.</p>";
+    echo "<div class='about-container'>";
+    echo "<h2>Votre panier est vide</h2>";
+    echo "<main>";
+    echo "<div class='background-image1' style=\"background-image: url('$Path_ref/images/order.jpg');\">";
+    echo "</div>";        
+    echo "</main>";        
+    echo "</div>";
 } else {
     $jsonData = file_get_contents('../data.json');
     $data = json_decode($jsonData, true);
 
+    echo "<div class='panier-container'>";
     echo "<table class='panier-table'>";
     echo "<tr><th>Photo</th><th>Nom du gâteau</th><th>Taille</th><th>Prix unitaire</th><th>Quantité</th><th>Total</th><th>Action</th></tr>";
 
@@ -55,6 +62,7 @@ if (empty($_SESSION['panier'])) {
         echo "<button onclick='location.href=\"paiement.php\"' class='btn-primary'>Valider la commande</button>";
         echo "</div>";
     }
+    echo "</div>"; // Fermeture du conteneur panier
 }
 
 include $Path_ref.'inc/footer.php';
