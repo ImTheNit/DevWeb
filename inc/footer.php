@@ -21,5 +21,3 @@
         <p>© 2024 Le Palais des Gâteaux - Tous droits réservés</p>
     </div>
 </footer>
-</body>
-</html>
