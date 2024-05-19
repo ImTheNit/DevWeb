@@ -27,38 +27,39 @@ if (!isset($_SESSION['initiated'])) {
     <link rel="shortcut icon" href="/DevWeb/images/logo.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="<?php echo $Path_ref; ?>index.php"><img src="<?php echo $Path_ref; ?>images/logo.png" alt="Logo"></a>
+<!-- header.php -->
+<header>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="<?php echo $Path_ref; ?>index.php"><img src="<?php echo $Path_ref; ?>images/logo.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="<?php echo $Path_ref; ?>index.php">Accueil</a></li>
+            <li><a href="<?php echo $Path_ref; ?>src/a-propos.php">À Propos</a></li>
+            <li class="nav-item">
+                <a href="<?php echo $Path_ref; ?>src/categories.php">Catégories</a>
+                <ul class="dropdown">
+                    <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-gateaux-photo">Gâteaux Photo</a></li>
+                    <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-pieces-montees-fruitees">Pièces Montées Fruitées</a></li>
+                    <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-charlottes">Charlottes</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contact</a></li>
+            <li><a href="<?php echo $Path_ref; ?>src/faq.php">FAQ</a></li>
+        </ul>
+        <div class="user-interactions">
+            <div class="searchbar">
+                <form action="<?php echo $Path_ref; ?>src/recherche.php" method="GET" class="search-form">
+                    <input type="text" name="query" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                 </form>
             </div>
-            <ul class="nav-links">
-                <li><a href="<?php echo $Path_ref; ?>index.php">Accueil</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/a-propos.php">À Propos</a></li>
-                <li class="nav-item">
-            <a href="<?php echo $Path_ref; ?>src/categories.php">Catégories</a>
-            <ul class="dropdown">
-                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-gateaux-photo">Gâteaux Photo</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-pieces-montees-fruitees">Pièces Montées Fruitées</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-charlottes">Charlottes</a></li>
-            </ul>
-        </li>
-                <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contact</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/faq.php">FAQ</a></li>
-            </ul>
-            <div class="user-interactions">
-                <div class="searchbar">
-                    <input type="text" placeholder="Rechercher...">
-                    <button type="submit">🔍</button>
-                </div>
-                <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true ){
-                       echo "<a href=".$Path_ref."src/deconnection.php class='user-icon'><img src=".$Path_ref."images/deconnexion.png alt=Deconnection></a>"; 
-                    }
-                
-                
-                ?>
-                <a href="<?php echo $Path_ref; ?>src/compte.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/user-login-icon-14.png" alt="Compte"></a>
-                <a href="<?php echo $Path_ref; ?>src/panier.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/panier.jpg" alt="Panier"></a>
-            </div>
-        </nav>
-    </header>
+            <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+                echo "<a href='".$Path_ref."src/deconnection.php' class='user-icon'><img src='".$Path_ref."images/deconnexion.png' alt='Déconnexion'></a>"; 
+            } ?>
+            <a href="<?php echo $Path_ref; ?>src/compte.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/user-login-icon-14.png" alt="Compte"></a>
+            <a href="<?php echo $Path_ref; ?>src/panier.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/panier.jpg" alt="Panier"></a>
+        </div>
+    </nav>
+</header>
+
