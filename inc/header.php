@@ -77,7 +77,6 @@ if (!isset($_SESSION['initiated'])) {
         }
             </style>
                 <li><a href="<?php echo $Path_ref; ?>index.php">Accueil</a></li>
-                <li><a href="<?php echo $Path_ref; ?>src/a-propos.php">À Propos</a></li>
                 <li class="nav-item">
                     <a href="<?php echo $Path_ref; ?>src/categories.php">Catégories</a>
                     <ul class="dropdown">
@@ -86,6 +85,7 @@ if (!isset($_SESSION['initiated'])) {
                         <li><a href="<?php echo $Path_ref; ?>src/categories.php?cat=Les-charlottes">Charlottes</a></li>
                     </ul>
                 </li>
+                <li><a href="<?php echo $Path_ref; ?>src/a-propos.php">À Propos</a></li>
                 <li><a href="<?php echo $Path_ref; ?>src/contact.php">Contact</a></li>
                 <li><a href="<?php echo $Path_ref; ?>src/faq.php">FAQ</a></li>
             </ul>
