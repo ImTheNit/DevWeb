@@ -124,7 +124,7 @@ if (session_status() === PHP_SESSION_NONE) {
             if (empty($_SESSION['panier'])) {
                 echo "<p>Votre panier est vide.</p>";
             } else {
-                $jsonData = file_get_contents($Path_ref.'data.json');
+                $jsonData = file_get_contents($Path_ref.'json/data.json');
                 $data = json_decode($jsonData, true);
 
                 echo "<table class='panier-table'>";

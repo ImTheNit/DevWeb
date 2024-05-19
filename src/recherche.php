@@ -7,7 +7,7 @@ include $Path_ref.'inc/header.php';
 $query = isset($_GET['query']) ? $_GET['query'] : '';
 
 // Charger les données des produits
-$jsonData = file_get_contents('../data.json');
+$jsonData = file_get_contents('../json/data.json');
 $data = json_decode($jsonData, true);
 
 $results = [];

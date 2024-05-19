@@ -8,7 +8,7 @@ include $Path_ref.'inc/header.php';
 
 <?php
 
-$jsonData = file_get_contents($Path_ref.'data.json');
+$jsonData = file_get_contents($Path_ref.'json/data.json');
 
 $data = json_decode($jsonData, true);
 

@@ -10,7 +10,7 @@ include $Path_ref.'inc/header.php';
 <?php
 $categoryName = isset($_GET['cat']) ? str_replace('-', ' ', $_GET['cat']) : null;
 
-$jsonData = file_get_contents('../data.json');
+$jsonData = file_get_contents('../json/data.json');
 $data = json_decode($jsonData, true);
 if ($categoryName && isset($data[$categoryName])) {
     echo "<h2>" . htmlspecialchars($categoryName) . "</h2>";
