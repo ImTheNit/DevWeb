@@ -2,7 +2,7 @@
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root'); 
-//define('DB_PASSWORD', ''); 
+define('DB_PASSWORD', ''); 
 define('DB_NAME', 'palaisdesgateaux');
 
 /* Tentative de connexion à la base de données MySQL */

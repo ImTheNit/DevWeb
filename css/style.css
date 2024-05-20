@@ -987,14 +987,22 @@ text-align: center;
 }
 
 /*Mise en page profil*/
-.profile-table {
+.profile-table-container {
   width: 60%;
   margin: 50px auto;
-  border-collapse: collapse;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
 }
 
-.profile-table th, .profile-table td {
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 12px;
@@ -1002,11 +1010,22 @@ text-align: center;
 
 .profile-table th {
   background-color: #f2f2f2;
+  color: #000; 
 }
 
 .profile-table tr:nth-child(even) {
   background-color: #f9f9f9;
+  color: #000; 
 }
+
+.profile-table tr:nth-child(odd) {
+  color: #000; 
+}
+
+.profile-table td {
+  color: #000; 
+}
+
 
 h2 {
   text-align: center;

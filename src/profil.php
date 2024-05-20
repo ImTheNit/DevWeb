@@ -28,30 +28,75 @@ $code_postal = $_SESSION["code_postal"];
 </head>
 <body>
 
+<style>
+    .profile-table-container {
+  width: 60%;
+  margin: 50px auto;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table th,
+.profile-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+.profile-table th {
+  background-color: #f2f2f2;
+  color: #000; 
+}
+
+.profile-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+  color: #000; 
+}
+
+.profile-table tr:nth-child(odd) {
+  color: #000; 
+}
+
+.profile-table td {
+  color: #000; 
+}
+
+</style>
+
 <h2 style="text-align: center;"><?php echo $pageTitle; ?></h2>
 
-<table class="profile-table">
-    <tr>
-        <th>Information</th>
-        <th>Détails</th>
-    </tr>
-    <tr>
-        <td>Email</td>
-        <td><?php echo htmlspecialchars($email); ?></td>
-    </tr>
-    <tr>
-        <td>Adresse</td>
-        <td><?php echo htmlspecialchars($numero . ' ' . $type_voie . ' ' . $nom_voie); ?></td>
-    </tr>
-    <tr>
-        <td>Ville</td>
-        <td><?php echo htmlspecialchars($nom_ville); ?></td>
-    </tr>
-    <tr>
-        <td>Code Postal</td>
-        <td><?php echo htmlspecialchars($code_postal); ?></td>
-    </tr>
-</table>
+<div class="profile-table-container">
+  <table class="profile-table">
+      <tr>
+          <th>Information</th>
+          <th>Détails</th>
+      </tr>
+      <tr>
+          <td>Email</td>
+          <td><?php echo htmlspecialchars($email); ?></td>
+      </tr>
+      <tr>
+          <td>Adresse</td>
+          <td><?php echo htmlspecialchars($numero . ' ' . $type_voie . ' ' . $nom_voie); ?></td>
+      </tr>
+      <tr>
+          <td>Ville</td>
+          <td><?php echo htmlspecialchars($nom_ville); ?></td>
+      </tr>
+      <tr>
+          <td>Code Postal</td>
+          <td><?php echo htmlspecialchars($code_postal); ?></td>
+      </tr>
+  </table>
+</div>
+
 
 <?php include $Path_ref.'inc/footer.php'; ?>
 
