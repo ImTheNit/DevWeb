@@ -42,7 +42,9 @@ if ($categoryName && isset($data[$categoryName])) {
     
     echo "</div>"; 
 } else {
+    echo "<div class='about-container'>";
     echo "<p>Catégorie non trouvée.</p>";
+    echo "</div>";
 }
 
 ?>
