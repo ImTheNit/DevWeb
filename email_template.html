@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de l'inscription</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        .email-header {
+            background: #d6000e; 
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .email-header img {
+            max-width: 100px; 
+            height: auto;
+        }
+        .email-body {
+            padding: 20px;
+            text-align: center;
+            background: #ffffff;
+        }
+        .email-footer {
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            background: #d6000e;
+        }
+        .button {
+            background: #acaaa8; 
+            padding: 10px 15px;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .button:hover {
+            background: #acaaa8; 
+        }
+    </style>
+</head>
+<body>
+    <table class="email-container">
+        <tr>
+            <td class="email-header">
+                <img src="cid:logoImage" alt="Palais des Gateaux">
+            </td>
+        </tr>
+        <tr>
+            <td class="email-body">
+                <h1>Bienvenue au Palais des Gâteaux !</h1>
+                <p>Bonjour {{prenom}},</p>
+                <p>Merci de vous être inscrit. Cliquez sur le bouton ci-dessous pour confirmer votre adresse e-mail et activer votre compte.</p>
+                <a href="{{lien_activation}}" class="button">Confirmer mon adresse e-mail</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="email-footer">
+                <p>Ceci est un message automatique, veuillez ne pas répondre directement.</p>
+                <p>Pour toute question, veuillez contacter le support.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

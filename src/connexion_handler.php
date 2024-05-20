@@ -1,7 +1,8 @@
 <?php 
 session_start(); // Démarrer la session au début du script
 
-$id = @mysqli_connect("localhost", "root", "","palaisdesgateaux") or die("Impossible de se connecter : ");
+$id = @mysqli_connect("mysql-lepalaisdesgateaux.alwaysdata.net", "359669", "Franconville95","lepalaisdesgateaux_1") or die("Impossible de se connecter : " );
+
 
 $email = $_POST["email"];
 $password = $_POST["password"];
