@@ -17,104 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
-    <style>
-        .panier-container {
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
 
-        .panier-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .panier-table th, 
-        .panier-table td {
-            border: 1px solid #ddd;
-            text-align: left;
-            padding: 12px;
-        }
-
-        .panier-table th {
-            background-color: #f2f2f2;
-            color: #333;
-        }
-
-        .panier-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .panier-table tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        .panier-table img {
-            width: 50px;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .btn-supprimer {
-            padding: 8px 16px;
-            background-color: #f44336;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .btn-supprimer:hover {
-            background-color: #d32f2f;
-        }
-
-        .btn-primary {
-            display: block;
-            width: max-content;
-            margin: 20px auto 40px;
-            padding: 10px 20px;
-            background-color: #ff0000;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn-primary:hover {
-            background-color: #ff0000;
-        }
-
-        .btn-valider {
-            background-color: orange;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
-            float: right;
-            margin-top: 10px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
     <main>
@@ -169,9 +72,7 @@ if (session_status() === PHP_SESSION_NONE) {
             ?>
         </div>
     </main>
-    <footer>
-        <p>Contactez-nous: info@palaisdesgateaux.com</p>
-    </footer>
+
 </body>
 </html>
 
