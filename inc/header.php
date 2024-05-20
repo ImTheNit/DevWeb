@@ -101,6 +101,10 @@ if (!isset($_SESSION['initiated'])) {
                 } ?>
                 <a href="<?php echo $Path_ref; ?>src/compte.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/user-login-icon-14.png" alt="Compte"></a>
                 <a href="<?php echo $Path_ref; ?>src/panier.php" class="user-icon"><img src="<?php echo $Path_ref; ?>images/panier.jpg" alt="Panier"></a>
+                <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+                    echo "<a href='".$Path_ref."src/mes_commandes.php' class='user-icon'><img src='".$Path_ref."images/commandes.png' alt='Commandes'></a>"; 
+                } ?>
+                
             </div>
         </nav>
     </header>
