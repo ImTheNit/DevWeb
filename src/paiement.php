@@ -17,7 +17,7 @@ $paymentMethod = isset($_GET['moyen']) ? $_GET['moyen'] : null;
     <div class="payment-options">
         <div class="payment-option">
             <a href="paiement.php?moyen=paypal" class="payment-link">
-                <img src="../images/paypal.png" alt="Payer avec PayPal" class="payment-img">
+                <img src="../images/paypal1.png" alt="Payer avec PayPal" class="payment-img">
             </a>
         </div>
         <div class="payment-option">
