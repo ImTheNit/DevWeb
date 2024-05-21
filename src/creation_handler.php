@@ -1,5 +1,5 @@
 <?php 
-$id = @mysqli_connect("mysql-lepalaisdesgateaux.alwaysdata.net", "359669", "Franconville95","lepalaisdesgateaux_1") or die("Impossible de se connecter : " );
+$id = @mysqli_connect("mysql-lepalaisdesgateaux.alwaysdata.net", "359669", "","lepalaisdesgateaux_1") or die("Impossible de se connecter : " );
 
 require_once '../vendor/autoload.php'; 
 
