@@ -45,7 +45,7 @@ $sql = 'INSERT INTO client VALUES("","'.$lastname.'","'.$name.'","'.$email.'","'
                     $mail->Host       = 'smtp-lepalaisdesgateaux.alwaysdata.net'; 
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'lepalaisdesgateaux@alwaysdata.net'; 
-                    $mail->Password   = 'Franconville95'; 
+                    $mail->Password   = ''; 
                     $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
